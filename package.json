@@ -1,0 +1,43 @@
+{
+  "name": "docker-credential-gh",
+  "version": "0.1.0",
+  "description": "Docker credential helper for ghcr.io backed by the existing GitHub CLI session. No PAT to create or store.",
+  "license": "MIT",
+  "type": "commonjs",
+  "bin": {
+    "docker-credential-gh": "bin/docker-credential-gh.js"
+  },
+  "files": [
+    "bin",
+    "dist/src",
+    "README.md",
+    "LICENSE"
+  ],
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "prepack": "npm run build",
+    "test": "npm run build && node --test \"dist/test/*.test.js\""
+  },
+  "keywords": [
+    "docker",
+    "credential-helper",
+    "ghcr",
+    "github",
+    "gh"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Emincanozen/docker-credential-gh.git"
+  },
+  "homepage": "https://github.com/Emincanozen/docker-credential-gh#readme",
+  "bugs": {
+    "url": "https://github.com/Emincanozen/docker-credential-gh/issues"
+  },
+  "devDependencies": {
+    "@types/node": "^22.0.0",
+    "typescript": "^5.6.0"
+  }
+}
