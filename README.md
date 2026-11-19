@@ -199,6 +199,10 @@ Last run (Node v22.14.0, Windows): `tests 13, pass 13, fail 0`, about 0.3 s. Typ
 - GitHub Enterprise Server support.
 - Possibly a single-file bundle to simplify installation.
 
+## Contributing
+
+Issues and pull requests are welcome: see [CONTRIBUTING.md](CONTRIBUTING.md). Security problems go through [SECURITY.md](SECURITY.md). Changes are listed in [CHANGELOG.md](CHANGELOG.md).
+
 ## License
 
 MIT, see [LICENSE](LICENSE).
