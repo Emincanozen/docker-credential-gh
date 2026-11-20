@@ -3,6 +3,8 @@
 </p>
 
 <p align="center">
+  <a href="https://www.npmjs.com/package/docker-credential-gh"><img alt="npm version" src="https://img.shields.io/npm/v/docker-credential-gh?logo=npm"></a>
+  <a href="https://www.npmjs.com/package/docker-credential-gh"><img alt="npm downloads" src="https://img.shields.io/npm/dm/docker-credential-gh"></a>
   <a href="LICENSE"><img alt="License: MIT" src="https://img.shields.io/badge/license-MIT-blue.svg"></a>
   <a href="package.json"><img alt="Node.js >= 20" src="https://img.shields.io/badge/node-%3E%3D20-339933?logo=nodedotjs&logoColor=white"></a>
   <img alt="Zero runtime dependencies" src="https://img.shields.io/badge/runtime%20dependencies-0-brightgreen.svg">
@@ -123,12 +125,20 @@ Source layout:
 - Only `github.com` registries; GitHub Enterprise Server is not supported.
 - Tokens from `GH_TOKEN` / `GITHUB_TOKEN` are used as-is, because `gh auth token` honours them.
 - Each `get` spawns `gh` twice, so expect a short delay per registry request.
-- Not published to npm; install from a clone.
 - If `gh` ever ships native support for this (see the issue above), prefer that.
 
 ## Quick start
 
 Requirements: Node.js >= 20 and [`gh`](https://cli.github.com) in `PATH`, logged in.
+
+Install from npm. This puts the `docker-credential-gh` executable in your `PATH`, where Docker looks for it:
+
+```sh
+npm install -g docker-credential-gh
+docker-credential-gh version
+```
+
+Or build from a clone:
 
 ```sh
 git clone https://github.com/Emincanozen/docker-credential-gh.git
